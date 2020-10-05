@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 import com.formacionbdi.app.items.models.Item;
 import com.formacionbdi.app.items.models.Producto;
 
-@Service
+@Service("serviceRest")
 public class ServiceItemImpl implements IServiceItem {
 	@Autowired
 	private RestTemplate restTemplate;
