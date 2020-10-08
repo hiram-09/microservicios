@@ -29,9 +29,13 @@ public class ProductosController {
 	}
 	
 	@GetMapping("/detalle/{id}")
-	public Producto detalle(@PathVariable Long id) {
+	public Producto detalle(@PathVariable Long id) throws Exception {
 		Producto producto = serviceProducto.detalle(id);
 		producto.setPort(port);
+		
+		//Prueba de Time out
+		//Thread.sleep(2000L);
+		
 		return producto;
 	}
 }
