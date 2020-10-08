@@ -23,7 +23,7 @@ public class ServiceItemFeign implements IServiceItem {
 
 	@Override
 	public Item detalle(Long id, Integer cantidad) {
-		return new Item(productoRest.detalle(id), 10);
+		return new Item(productoRest.detalle(id), cantidad);
 	}
 
 }
